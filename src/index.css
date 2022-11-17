@@ -1,11 +1,23 @@
-/* Main Page */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.homepage {
-    background: linear-gradient(180deg, rgba(184, 47, 233, 0.06) 0.97%, rgba(87, 167, 240, 0.06) 100%);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
+
+body {
+    box-sizing: border-box;
+    font-family: 'PingFang SC';
+}
+
+/* Main Page */
 
 .homepage-main {
     padding: 3rem 15rem;
+    background: linear-gradient(180deg, rgba(184, 47, 233, 0.06) 0.97%, rgba(87, 167, 240, 0.06) 100%);
 }
 
 .homepage-main-post {
@@ -21,7 +33,6 @@
 
 /* Trendy Title */
 .trendy-title {
-    font-family: 'PingFang SC';
     font-style: normal;
     font-weight: 600;
     font-size: 1.5rem;
@@ -138,12 +149,17 @@
 }
 
 .type {
-    padding: 0rem 0.5rem;
+    padding: 1rem 0.5rem;
     font-family: 'PingFang SC';
     font-style: normal;
-    font-weight: 500;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     width: 8rem;
+    border-bottom: 2px solid transparent;
+}
+
+.type-selected {
+    font-weight: 500;
+    border-bottom: 2px solid rgb(182, 39, 243);
 }
 
 .type p {

@@ -21,4 +21,11 @@ interface TrendyContent {
     tags: string[];
 }
 
+
+export interface UserProfileItem {
+    avatarUrl: string;
+    username: string;
+  }
+  
+
 export type { PostContent, TrendyContent };

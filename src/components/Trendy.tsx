@@ -1,6 +1,6 @@
 import React from "react";
 import TrendyCard from "./TrendyCard";
-import { TrendyContent } from "./Structure";
+import { TrendyContent } from "../types";
 
 interface Props {
     trendyList: TrendyContent[];
