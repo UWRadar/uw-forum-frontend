@@ -1,0 +1,108 @@
+
+/* Trendy */
+.trendy {}
+
+/* Trendy Title */
+.trendy-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 28px;
+}
+
+/* Trendy List */
+.trendy-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    overflow-x: scroll;
+}
+
+/* Trendy Card */
+.trendyCard {
+    border-radius: 1rem;
+    background: rgba(99, 70, 157, 0.65);
+    margin: 1rem 1rem 1rem 0;
+    padding: 1rem 1.3rem;
+    width: 17rem;
+    height: 11rem;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trendyCard-title {
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.20rem;
+    /* line-height: auto; */
+    color: #FFFFFF;
+}
+
+.trendyCard-content {
+    margin-top: 0.2rem;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.85rem;
+    line-height: auto;
+    color: #f0f0f0;
+}
+
+.trendyCard-footer {
+    margin-top: 0.3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trendyCard-tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-end;
+    gap: 1rem;
+}
+
+.trendyCard-tag {
+    background: #FFFFFF;
+    border-radius: 100px;
+    padding: 0.3rem;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    color: #9683BD;
+}
+
+.trendyCard-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.trendyCard-userName {
+    margin-left: 0.4rem;
+}
+
+.trendyCard-avatar,
+.post-avatar {
+    height: 1.9rem;
+    width: 1.9rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Trendy Card End */
+
