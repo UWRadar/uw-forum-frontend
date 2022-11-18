@@ -105,21 +105,18 @@ const typeList = ["今日最新", "租房", "吃瓜", "学习", "华大课友"];
 function HomePage() {
   return (
     <>
-      <Header />
-      <main className="homepage-main">
-        <div className="lg:max-w-5xl mx-auto py-8 px-8">
-          <Trendy trendyList={TrendyContents} />
-          <div className="homepage-main-post flex-col lg:flex-row gap-8">
-            <div className="rounded-lg">
-              <div className="topics-list">
-                <TypeHeader typeList={typeList} />
-              </div>
-              <PostList postList={PostContents} />
+      <div className="lg:max-w-5xl mx-auto py-8 px-8">
+        <Trendy trendyList={TrendyContents} />
+        <div className="homepage-main-post flex-col lg:flex-row gap-8">
+          <div className="rounded-lg">
+            <div className="topics-list">
+              <TypeHeader typeList={typeList} />
             </div>
-            <SideBar />
+            <PostList postList={PostContents} />
           </div>
+          <SideBar />
         </div>
-      </main>
+      </div>
     </>
   );
 }
