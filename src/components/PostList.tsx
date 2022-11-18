@@ -10,7 +10,7 @@ function PostList({ postList }: Props) {
         return <Post post={post} />
     });
     return (
-        <div className="post-list">
+        <div className="flex flex-col gap-6">
             {postElements}
         </div>
     );

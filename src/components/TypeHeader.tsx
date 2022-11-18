@@ -14,14 +14,14 @@ function TypeHeader({ typeList }: Props) {
     return (
       <div
         key={type}
-        className={`type ${tab === i ? "type-selected" : ""}`}
+        className={`type ${tab === i ? "type-selected" : ""} duration-300 transition-all`}
         onClick={() => setTab(() => i)}
       >
         <p>{type}</p>
       </div>
     );
   });
-  return <div className="type-header">{topicsElement}</div>;
+  return <div className="type-header mb-6 rounded-lg overflow-hidden">{topicsElement}</div>;
 }
 
 export default TypeHeader;
