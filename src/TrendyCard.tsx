@@ -18,8 +18,8 @@ function TrendyCard({ Content }: Props) {
                     <div className="trendyCard-userName">{Content.userName}</div>
                 </div>
                 <div className="trendyCard-tags">
-                    {Content.tags.map((tag) => {
-                        return <div className="trendyCard-tag"> {tag} </div>;
+                    {Content.tags.map((tag, idx) => {
+                        return <div key={idx} className="trendyCard-tag"> {tag} </div>;
                     })}
                 </div>
             </div>

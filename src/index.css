@@ -146,6 +146,10 @@
     width: 8rem;
 }
 
+.type-focused {
+    border-bottom: 0.2rem solid #63469D;
+}
+
 .type p {
     text-align: center;
 }

@@ -5,7 +5,7 @@ import weibo from "./img/weibo.svg";
 import bilibili from "./img/bilibili.svg";
 import wechat from "./img/wechat.svg";
 
-
+// TODO: update links
 function SideBar() {
     return (
         <div className="sidebar">

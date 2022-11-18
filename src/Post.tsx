@@ -27,8 +27,8 @@ function Post({ post }: Props) {
                 </div>
 
                 <div className="post-tags">
-                    {post.tags.map((tag) => {
-                        return <div className="post-tag"> {tag} </div>;
+                    {post.tags.map((tag, idx) => {
+                        return <div key={idx} className="post-tag"> {tag} </div>;
                     })}
                 </div>
             </div>

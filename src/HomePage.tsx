@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "./Banner";
 import PostList from "./PostList";
 import Trendy from "./Trendy";
@@ -6,6 +6,8 @@ import SideBar from "./SideBar";
 import img from "./img/original.png";
 import TypeHeader from "./TypeHeader";
 import { TrendyContent, PostContent } from "./Structure";
+import { HomePageTypes } from "./Enums";
+import ServerConfig from "./ServerConfig";
 
 const PostContents = [
     { userName: "华大课友", postDate: "发布时间：18小时前", avatar: img, title: "华大课友介绍", content: "华大课友是一个社团，它分为技术部，策划部，人力资源部，公共宣传部，编辑部。其中，技术部人数最多，也是最厉害的一个部门。", numLikes: 1000, numComments: 1000, tags: ["租房"] },
@@ -23,7 +25,37 @@ const TrendyContents = [
 
 const typeList = ["今日最新", "租房", "吃瓜", "学习", "华大课友"]
 
+function getPosts(typeSelected: HomePageTypes) {
+    fetch(ServerConfig.SERVER_URL + "post/getPostByType", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            type: typeSelected,
+        }),
+    })
+        .then((response) => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                console.log("error");
+            }
+        })
+        .then((data) => {
+            if (data) {
+                console.log(data);
+            }
+        })
+}
+
 function HomePage() {
+    const [typeSelected, setTypeSelected] = React.useState(HomePageTypes.Latest);
+    useEffect(() => {
+        // console.log(typeSelected);
+        getPosts(typeSelected);
+    }, [typeSelected]);
+
     return (
         <div className="homepage">
             <Banner />
@@ -32,7 +64,7 @@ function HomePage() {
                 <div className="homepage-main-post">
                     <div>
                         <div className="topics-list">
-                            <TypeHeader typeList={typeList} />
+                            <TypeHeader typeList={typeList} typeSelected={typeSelected} setTypeSelected={setTypeSelected} />
                         </div>
                         <PostList postList={PostContents} />
                     </div>

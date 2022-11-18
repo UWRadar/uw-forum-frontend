@@ -8,8 +8,8 @@ interface Props {
 
 
 function Trendy({ trendyList }: Props) {
-    const trendyElements = trendyList.map((trendy) => {
-        return <TrendyCard Content={trendy} />
+    const trendyElements = trendyList.map((trendy, idx) => {
+        return <TrendyCard key={idx} Content={trendy} />
     });
 
     return (
