@@ -1,5 +1,7 @@
 const ServerConfig = {
-    SERVER_URL: 'http://localhost:3000/api',
+    SERVER_URL: 'http://localhost:9000/',
+    GET_POST_BY_TYPE: 'post/type/',
+    GET_TRENDY: 'trendy/all',
 }
 
 

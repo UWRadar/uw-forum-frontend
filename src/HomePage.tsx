@@ -9,7 +9,7 @@ import { TrendyContent, PostContent } from "./Structure";
 import { HomePageTypes } from "./Enums";
 import ServerConfig from "./ServerConfig";
 
-const PostContents = [
+let PostContents = [
     { userName: "华大课友", postDate: "发布时间：18小时前", avatar: img, title: "华大课友介绍", content: "华大课友是一个社团，它分为技术部，策划部，人力资源部，公共宣传部，编辑部。其中，技术部人数最多，也是最厉害的一个部门。", numLikes: 1000, numComments: 1000, tags: ["租房"] },
     { userName: "华大课友", postDate: "发布时间：18小时前", avatar: img, title: "华大课友介绍", content: "华大课友是一个社团，它分为技术部，策划部，人力资源部，公共宣传部，编辑部。其中，技术部人数最多，也是最厉害的一个部门。", numLikes: 1000, numComments: 1000, tags: ["租房"] },
     { userName: "华大课友", postDate: "发布时间：18小时前", avatar: img, title: "华大课友介绍", content: "华大课友是一个社团，它分为技术部，策划部，人力资源部，公共宣传部，编辑部。其中，技术部人数最多，也是最厉害的一个部门。", numLikes: 1000, numComments: 1000, tags: ["租房"] },
@@ -25,15 +25,57 @@ const TrendyContents = [
 
 const typeList = ["今日最新", "租房", "吃瓜", "学习", "华大课友"]
 
-function getPosts(typeSelected: HomePageTypes) {
-    fetch(ServerConfig.SERVER_URL + "post/getPostByType", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            type: typeSelected,
-        }),
+function getPosts(typeSelected: HomePageTypes, setPosts: React.Dispatch<React.SetStateAction<{
+    userName: string;
+    postDate: string;
+    avatar: string;
+    title: string;
+    content: string;
+    numLikes: number;
+    numComments: number;
+    tags: string[];
+}[]>>) {
+    let api = ServerConfig.SERVER_URL + ServerConfig.GET_POST_BY_TYPE + typeList[typeSelected];
+    console.log(api);
+    fetch(api, {
+        method: "GET",
+    })
+        .then((response) => {
+            if (response.ok) {
+                return response.json()
+            } else {
+                console.log("error");
+            }
+        })
+        .then((data) => {
+            if (data) {
+                // console.log(data);
+                PostContents = [];
+                data.forEach((item: any) => {
+                    console.log(item.postDate);
+                    PostContents.push({
+                        userName: item.userName,
+                        postDate: new Date(item.publishDate).toLocaleString(),
+                        // TODO avatar: item.avatar,
+                        avatar: img,
+                        title: item.title,
+                        content: item.content,
+                        numLikes: item.upVote,
+                        // TODO numComments: item.numComments,
+                        numComments: 1000,
+                        tags: item.tags.split(","),
+                    })
+                })
+                setPosts(PostContents);
+            }
+        })
+}
+
+function getTrendy() {
+    let api = ServerConfig.SERVER_URL + ServerConfig.GET_TRENDY;
+    console.log(api);
+    fetch(api, {
+        method: "GET",
     })
         .then((response) => {
             if (response.ok) {
@@ -51,10 +93,14 @@ function getPosts(typeSelected: HomePageTypes) {
 
 function HomePage() {
     const [typeSelected, setTypeSelected] = React.useState(HomePageTypes.Latest);
+    const [posts, setPosts] = React.useState(PostContents);
+
     useEffect(() => {
         // console.log(typeSelected);
-        getPosts(typeSelected);
+        getPosts(typeSelected, setPosts);
     }, [typeSelected]);
+
+    getTrendy();
 
     return (
         <div className="homepage">
@@ -66,7 +112,8 @@ function HomePage() {
                         <div className="topics-list">
                             <TypeHeader typeList={typeList} typeSelected={typeSelected} setTypeSelected={setTypeSelected} />
                         </div>
-                        <PostList postList={PostContents} />
+                        {/* <PostList postList={PostContents} /> */}
+                        <PostList postList={posts} />
                     </div>
                     <SideBar />
                 </div>

@@ -24,8 +24,8 @@
     font-family: 'PingFang SC';
     font-style: normal;
     font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 28px;
+    font-size: 24px;
+    /* line-height: 28px; */
 }
 
 /* Trendy List */
@@ -39,12 +39,13 @@
 
 /* Trendy Card */
 .trendyCard {
-    border-radius: 1rem;
+    border-radius: 16px;
     background: rgba(99, 70, 157, 0.65);
-    margin: 1rem 1rem 1rem 0;
-    padding: 1rem 1.3rem;
+    margin: 16px 16px 16px 0;
+    padding: 16px 21px;
+    /* TODO deal when adjusting width */
     width: 20%;
-    height: 9.5rem;
+    height: 160px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -55,22 +56,20 @@
     font-style: normal;
     font-weight: 580;
     font-size: 1.4rem;
-    line-height: auto;
     color: #FFFFFF;
 }
 
 .trendyCard-content {
-    margin-top: 0.4rem;
+    margin-top: 6.4px;
     font-family: 'PingFang SC';
     font-style: normal;
     font-weight: 540;
     font-size: 1.1rem;
-    line-height: auto;
     color: #FFFFFF;
 }
 
 .trendyCard-footer {
-    margin-top: 0.3rem;
+    margin-top: 4.8px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -86,15 +85,15 @@
 }
 
 .trendyCard-tag {
-    margin-left: 1rem;
+    margin-left: 16px;
     background: #FFFFFF;
     border-radius: 100px;
     padding: 0.3rem;
     font-family: 'PingFang SC';
     font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    letter-spacing: 0.1em;
+    font-weight: bolder;
+    font-size: 14px;
+    letter-spacing: 2px;
     color: #9683BD;
 }
 
@@ -131,7 +130,6 @@
     flex-direction: row;
     align-items: center;
     justify-content: flex-start;
-    margin: 0 auto;
     width: 100%;
     background: #FFFFFF;
     margin-bottom: 1.5rem;
@@ -212,7 +210,6 @@
     font-style: normal;
     font-weight: 580;
     font-size: 1.4rem;
-    line-height: auto;
     color: #000000;
 }
 
@@ -300,7 +297,10 @@
     font-family: 'PingFang SC';
     font-style: normal;
     font-weight: 600;
+}
 
+.sidebar-introduction {
+    padding: 0;
 }
 
 .link {
@@ -339,7 +339,8 @@
 }
 
 /* two-line wrap */
-.trendyCard-title {
+.trendyCard-title,
+.trendyCard-content {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -348,7 +349,6 @@
 }
 
 /* three-line wrap */
-.trendyCard-content,
 .post-content {
     overflow: hidden;
     text-overflow: ellipsis;
