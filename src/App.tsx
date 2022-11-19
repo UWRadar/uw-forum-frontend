@@ -1,15 +1,11 @@
-import { Outlet, Link } from "react-router-dom";
-import Header from "./components/Header";
+import React from "react";
 import HomePage from "./pages/HomePage";
 
 function App() {
 	return (
-		<>
-			<Header />
-			<main className="w-full">
-				<Outlet />
-			</main>
-		</>
+		<div className="App">
+			<HomePage />
+		</div>
 	);
 }
 
