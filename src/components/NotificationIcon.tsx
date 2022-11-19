@@ -37,7 +37,7 @@ const Popup = ({ data }: {
   data: NotificationItem[]
 }) => {
   return (
-    <div className="md:w-96 h-0 overflow-hidden opacity-0 peer-hover:h-auto peer-hover:opacity-100 hover:h-auto hover:opacity-100 transition-all duration-500 bg-white fixed top-12 inset-x-8 md:absolute md:right-0 md:left-auto md:top-8 z-10 shadow-2xl rounded-xl">
+    <div className="md:w-96 h-0 overflow-hidden opacity-0 peer-hover:h-auto peer-hover:opacity-100 hover:h-auto hover:opacity-100 transition-all duration-500 bg-white fixed top-12 inset-x-4 md:absolute md:right-0 md:left-auto md:top-8 z-10 shadow-2xl rounded-xl">
       <div className="px-4 py-4 border-b border-b-slate-300">
         消息提醒
       </div>

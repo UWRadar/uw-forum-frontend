@@ -110,7 +110,7 @@ function HomePage() {
         <div className="lg:max-w-5xl mx-auto py-8 px-8">
           <Trendy trendyList={TrendyContents} />
           <div className="homepage-main-post flex-col lg:flex-row gap-8">
-            <div className="rounded-lg">
+            <div>
               <div className="topics-list">
                 <TypeHeader typeList={typeList} />
               </div>

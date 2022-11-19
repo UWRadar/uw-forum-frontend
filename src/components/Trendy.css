@@ -4,8 +4,9 @@
 
 /* Trendy Title */
 .trendy-title {
-    font-weight: 500;
-    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
     line-height: 28px;
 }
 
@@ -26,7 +27,7 @@
     margin: 1rem 1rem 1rem 0;
     padding: 1rem 1.3rem;
     width: 17rem;
-    height: 11.5rem;
+    height: 11rem;
     flex: none;
     display: flex;
     flex-direction: column;
@@ -34,8 +35,11 @@
 }
 
 .trendyCard-title {
+    font-family: 'PingFang SC';
+    font-style: normal;
     font-weight: 500;
-    font-size: 1.15rem;
+    font-size: 1.20rem;
+    /* line-height: auto; */
     color: #FFFFFF;
 }
 
@@ -50,6 +54,7 @@
 }
 
 .trendyCard-footer {
+    margin-top: 0.3rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -60,6 +65,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    align-self: flex-end;
     gap: 1rem;
 }
 
@@ -67,9 +73,27 @@
     background: #FFFFFF;
     border-radius: 100px;
     padding: 0.3rem;
+    font-family: 'PingFang SC';
+    font-style: normal;
     font-size: 0.85rem;
     letter-spacing: 0.1em;
     color: #9683BD;
+}
+
+.trendyCard-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #FFFFFF;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.trendyCard-userName {
+    margin-left: 0.4rem;
 }
 
 .trendyCard-avatar,

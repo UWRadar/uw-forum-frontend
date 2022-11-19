@@ -7,16 +7,16 @@ interface Props {
 
 function Post({ post }: Props) {
   return (
-    <div className="post shadow-sm hover:shadow-lg duration-300 transition-all rounded-xl cursor-pointer">
+    <div className="post">
       <div className="flex flex-col gap-2">
         <div className="post-header">
           <div className="post-user">
             <div>
               <img className="post-avatar" src={post.avatar} alt="avatar" />
             </div>
-            <div className="text-sm pl-2">{post.userName}</div>
+            <div className="pl-2">{post.userName}</div>
           </div>
-          <div className="text-sm text-gray-400"> {post.postDate} </div>
+          <div className="post-date"> {post.postDate} </div>
         </div>
 
         <div className="post-title line-clamp-1">{post.title} </div>
