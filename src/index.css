@@ -1,0 +1,19 @@
+.post-type-btn-selected {
+    width: 70px;
+    height: 30px;
+    background: purple;
+}
+
+.post-type-btn-unselected {
+    width: 70px;
+    height: 30px;
+    background: grey;
+}
+
+.label-selected {
+    background: purple;
+}
+
+.label-unselected {
+    background: grey;
+}
