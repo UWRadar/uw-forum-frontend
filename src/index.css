@@ -15,7 +15,7 @@ body {
 
 /* Main Page */
 
-main {
+.homepage-main {
     /* padding: 3rem 15rem; */
     width: 100%;
     background: linear-gradient(180deg, rgba(184, 47, 233, 0.06) 0.97%, rgba(87, 167, 240, 0.06) 100%);
