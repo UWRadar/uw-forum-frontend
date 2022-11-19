@@ -73,9 +73,9 @@ body {
 /* Post */
 
 .post {
-    height: 13rem;
+    height: 12.5rem;
     background: #FFFFFF;
-    padding: 1.2rem 1.4rem;
+    padding: 0.8rem 1.4rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
