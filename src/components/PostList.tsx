@@ -1,7 +1,7 @@
 import React from "react";
 import TopicsHeader from "./TypeHeader";
 import Post from "./Post";
-import { PostContent } from "./Structure";
+import { PostContent } from "../types";
 
 interface Props {
     postList: PostContent[];

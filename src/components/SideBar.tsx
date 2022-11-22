@@ -1,16 +1,13 @@
 import React from "react";
-import img from "./img/original.png";
-import zhihu from "./img/zhihu.svg";
-import weibo from "./img/weibo.svg";
-import bilibili from "./img/bilibili.svg";
-import wechat from "./img/wechat.svg";
+
+
 
 // TODO: update links
 function SideBar() {
     return (
         <div className="sidebar">
             <div className="sidebar-logo">
-                <img src={img} alt="logo" />
+                <img src="/img/original.png" alt="logo" />
             </div>
             <div className="sidebar-appName">
                 <p>华大树洞</p>
@@ -39,22 +36,22 @@ function SideBar() {
             <div className="sidebar-social">
                 <div>
                     <a href="https://mp.weixin.qq.com/">
-                        <img src={wechat} alt="wechat" />
+                        <img src="/img/wechat.svg" alt="wechat" />
                     </a>
                 </div>
                 <div>
                     <a href="https://www.zhihu.com/people/">
-                        <img src={zhihu} alt="zhihu" />
+                        <img src="img/zhihu.svg" alt="zhihu" />
                     </a>
                 </div>
                 <div>
                     <a href="https://weibo.com/">
-                        <img src={weibo} alt="weibo" />
+                        <img src="/img/weibo.svg" alt="weibo" />
                     </a>
                 </div>
                 <div>
                     <a href="https://space.bilibili.com/">
-                        <img src={bilibili} alt="bilibili" />
+                        <img src="/img/bilibili.svg" alt="bilibili" />
                     </a>
                 </div>
             </div>

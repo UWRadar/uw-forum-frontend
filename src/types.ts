@@ -22,3 +22,13 @@ interface TrendyContent {
 }
 
 export type { PostContent, TrendyContent };
+
+enum HomePageTypes {
+    Latest,
+    Rent,
+    Gossip,
+    Study,
+    Club
+}
+
+export { HomePageTypes };
