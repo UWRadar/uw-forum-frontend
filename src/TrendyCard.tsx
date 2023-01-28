@@ -1,4 +1,4 @@
-import { TrendyContent } from "./Structure";
+import { TrendyContent } from "./types";
 
 interface Props {
 	Content: TrendyContent;

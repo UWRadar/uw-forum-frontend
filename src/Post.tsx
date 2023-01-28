@@ -1,4 +1,4 @@
-import { PostContent } from "./Structure";
+import { PostContent } from "./types";
 
 interface Props {
 	post: PostContent;
