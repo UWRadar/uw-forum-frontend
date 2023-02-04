@@ -8,10 +8,12 @@ function CreatePost() {
     // false for question; true for sharings
     const [isQuestion, setIsQuestion] = useState<boolean>(true);
     const [labels, setLabels] = useState<{[id: string]: boolean;}>({});
+    const [questionInput, setQuestionInput] = useState<string>("");
+    const [titleInput, setTitleInput] = useState<string>("");
+    const [contentInput, setContentInput] = useState<string>("");
 
     const handlePostTypeClick = () => {
         setIsQuestion(!isQuestion);
-        console.log(isQuestion);
     }
 
     const handleLabelClick = (event: any) => {
@@ -50,9 +52,17 @@ function CreatePost() {
             {isQuestion ? (
                 <div>
                     <div>问题内容：</div>
+                    <input onChange={(event) => setQuestionInput(event.target.value)}/>
                     {/*https://mui.com/material-ui/react-text-field/*/}
                 </div>
-            ) : (<div>这是分享</div>)}
+            ) : (
+                <div>
+                    <div>标题：</div>
+                    <input />
+                    <div>分享内容：</div>
+                    {/* rich text */}
+                </div>
+            )}
             <div>
                 <div>标签：</div>
                 {labelValues.map((label) => {
