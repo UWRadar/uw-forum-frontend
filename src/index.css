@@ -17,3 +17,23 @@
 .label-unselected {
     background: grey;
 }
+
+.create-post {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 537px;
+    border-radius: 15px;
+    background: #ffffff;
+}
+
+.create-post-head-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    color: white;
+    height: 60px;
+    background: #727272;
+    border-radius: 15px 15px 0px 0px;
+}

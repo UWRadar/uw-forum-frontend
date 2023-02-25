@@ -19,11 +19,14 @@ function CreatePost() {
     const handleLabelClick = (event: any) => {
         const curLabels: {[id: string]: boolean;} = labels;
         const curEventLabel = event.target.textContent;
-        console.log(curEventLabel);
-        console.log(event.target);
+        if (event.target.className == "label-unselected") {
+            event.target.className = "label-selected";
+        } else {
+            event.target.className = "label-unselected";
+        }
+
         curLabels[curEventLabel] = !curLabels[curEventLabel];
         setLabels(curLabels);
-        console.log(curLabels);
     }
 
     useEffect(() => {
@@ -66,7 +69,6 @@ function CreatePost() {
             <div>
                 <div>标签：</div>
                 {labelValues.map((label) => {
-                    console.log(labels[label]);
                     return (
                         <div key={label} className={labels[label] ? "label-selected" : "label-unselected"} onClick={handleLabelClick}>{label}</div>
                     )
