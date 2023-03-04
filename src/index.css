@@ -1,7 +1,16 @@
-/* Main Page */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+
+:root {
+	--main-bg-color: linear-gradient(180deg, rgba(184, 47, 233, 0.06) 0.97%, rgba(87, 167, 240, 0.06) 100%);
+}
+
+
+/* Main Page */
 .homepage {
-	background: linear-gradient(180deg, rgba(184, 47, 233, 0.06) 0.97%, rgba(87, 167, 240, 0.06) 100%);
+	background: var(--main-bg-color);
 }
 
 .homepage-main {
@@ -136,8 +145,7 @@
 }
 
 .type {
-	padding: 0 0.5rem;
-	font-family: 'PingFang SC';
+	font-family: 'PingFang SC', sans-serif;
 	font-style: normal;
 	font-weight: 500;
 	font-size: 1.3rem;
@@ -350,7 +358,6 @@
 
 /* three-line wrap */
 .post-content {
-	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: 3;

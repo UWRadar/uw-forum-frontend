@@ -1,4 +1,5 @@
-import { TrendyContent } from "./types";
+import React from "react";
+import { TrendyContent } from "../types";
 
 interface Props {
 	Content: TrendyContent;

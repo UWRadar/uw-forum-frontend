@@ -1,5 +1,5 @@
 import Post from "./Post";
-import { PostContent } from "./types";
+import { PostContent } from "../types";
 
 interface Props {
 	postList: PostContent[];

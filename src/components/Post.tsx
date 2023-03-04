@@ -1,4 +1,5 @@
-import { PostContent } from "./types";
+import React from "react";
+import { PostContent } from "../types";
 
 interface Props {
 	post: PostContent;

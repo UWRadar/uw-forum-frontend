@@ -1,3 +1,5 @@
+import React from "react";
+
 // TODO: update links
 function SideBar() {
 	return (
@@ -37,7 +39,7 @@ function SideBar() {
 				</div>
 				<div>
 					<a href="https://www.zhihu.com/people/">
-						<img src="/img/zhihu.svg" alt="zhihu" />
+						<img src="img/zhihu.svg" alt="zhihu" />
 					</a>
 				</div>
 				<div>
