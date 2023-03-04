@@ -69,7 +69,7 @@ const Header = () => {
   // const userState = useUserStore((state) => state);
 
   return (
-    <header className={`w-full h-16 flex items-center justify-between px-6`}>
+    <header className={`page-header w-full h-16 flex items-center justify-between px-6 shadow-md`}>
       <span
         className="text-xl font-semibold cursor-pointer"
         // onClick={() => router.push("/")}

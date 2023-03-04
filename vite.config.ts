@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import autoprefixer from "autoprefixer";
 import eslint from "@rollup/plugin-eslint";
+import tailwindcss from "tailwindcss";
 
 dns.setDefaultResultOrder("verbatim");
 
@@ -21,7 +22,7 @@ export default defineConfig({
 	},
 	css: {
 		postcss: {
-			plugins: [autoprefixer]
+			plugins: [autoprefixer, tailwindcss]
 		}
 	},
 	plugins: [

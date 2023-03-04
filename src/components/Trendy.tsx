@@ -38,7 +38,7 @@ function Trendy() {
 			}
 		}).catch((error) => {
 			console.log(error);
-		})
+		});
 	}, []);
 
 	const trendyElements = trendyContents.map((trendy, idx) => {

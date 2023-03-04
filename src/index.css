@@ -5,6 +5,7 @@
 
 :root {
 	--main-bg-color: linear-gradient(180deg, rgba(184, 47, 233, 0.06) 0.97%, rgba(87, 167, 240, 0.06) 100%);
+	--header-bg-color: white;
 }
 
 
@@ -358,8 +359,15 @@
 
 /* three-line wrap */
 .post-content {
+	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
+}
+
+
+/* page header */
+.page-header {
+	background: var(--header-bg-color);
 }
