@@ -1,5 +1,3 @@
-import React from "react";
-
 interface PostContent {
   userName: string;
   avatar: string;
