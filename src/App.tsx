@@ -1,4 +1,5 @@
 import HomePage from "./HomePage";
+import NotificationPage from "./pages/NotificationPage";
 
 function App() {
 	return (
