@@ -18,3 +18,8 @@ export const getTrendy = () => {
 	const url = ServerConfig.SERVER_URL + ServerConfig.GET_TRENDY;
 	return fetchJson(url);
 };
+
+export const getNotificationsAPI = () => {
+	const api = ServerConfig.SERVER_URL + ServerConfig.GET_NOTIFICATION;
+	return fetch(api);
+};

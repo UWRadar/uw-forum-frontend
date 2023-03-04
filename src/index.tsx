@@ -6,12 +6,17 @@ import {
 	RouterProvider,
 } from "react-router-dom";
 import HomePage from "./pages/HomePage";
+import NotificationPage from "./pages/NotificationPage";
 import ProfilePage from "./pages/ProfilePage";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <HomePage />
+	},
+	{
+		path: "/notifications",
+		element: <NotificationPage />
 	},
 	{
 		path: "/profile",
