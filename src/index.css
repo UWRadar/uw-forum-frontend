@@ -1,17 +1,32 @@
 .post-type-btn-selected {
-    width: 70px;
-    height: 30px;
-    background: purple;
+    background: #63469D;
+    color: white;
 }
 
 .post-type-btn-unselected {
+    background: white;
+    color: #63469D;
+}
+
+.post-type-btn-selected, .post-type-btn-unselected {
     width: 70px;
     height: 30px;
-    background: grey;
+    border-radius: 10px;
+    margin-right: 15px;
+    text-align: center;
+    line-height: 30px;
+    border-style: solid;
+    border-color: #63469D;
+    border-width: 1px;
+}
+
+.post-type-btns {
+    display: flex;
+    flex-direction: row;
 }
 
 .label-selected {
-    background: purple;
+    background: #63469D;
 }
 
 .label-unselected {

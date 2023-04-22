@@ -45,7 +45,7 @@ function CreatePost() {
 
             <div>
                 <div>帖子类型：</div>
-                <div>
+                <div className="post-type-btns">
                     <div className={isQuestion ? "post-type-btn-selected" : "post-type-btn-unselected"} onClick={handlePostTypeClick}>提问</div>
                     <div className={isQuestion ? "post-type-btn-unselected" : "post-type-btn-selected"} onClick={handlePostTypeClick}>分享</div>
                 </div>

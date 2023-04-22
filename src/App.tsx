@@ -1,5 +1,5 @@
 import React from "react";
-import CreatePost from "./CreatePost";
+import CreatePost from "./components/CreatePost";
 
 function App() {
 	return (
