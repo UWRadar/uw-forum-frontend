@@ -33,8 +33,15 @@ function Trendy() {
 
 	useEffect(() => {
 		getTrendy().then((data) => {
+			console.log("trendy data", data);
 			if (data) {
-				setTrendyContents(data);
+				setTrendyContents(() => data.map((item) => ({
+					userName: "居家小妙招",
+					avatar: "",
+					title: "如何在99度高温的西雅图生存？",
+					content: "炎炎夏日，这些居家避暑小妙招你值得拥有....",
+					tags: ["本周热点话题"],
+				})));
 			}
 		}).catch((error) => {
 			console.log(error);

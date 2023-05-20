@@ -85,13 +85,14 @@ function getPosts(
 		}
 	}).then((data) => {
 		if (data) {
-			// console.log(data);
+			console.log("post", data);
 			PostContents = [];
 			data.forEach((item: Post) => {
 				console.log(item.postDate);
 				PostContents.push({
 					userName: item.userName,
-					postDate: new Date(item.publishDate).toLocaleString(),
+					postDate: new Date
+					(item.publishDate).toLocaleString(),
 					// TODO avatar: item.avatar,
 					avatar: "/img/original.png",
 					title: item.title,
@@ -136,7 +137,10 @@ function HomePage() {
 		getPosts(typeSelected, setPosts);
 	}, [typeSelected]);
 
-	getTrendy();
+	useEffect(() => {
+		getTrendy();
+		getPosts(typeSelected, setPosts);
+	}, []);
 
 	return (
 		<div className="homepage">
